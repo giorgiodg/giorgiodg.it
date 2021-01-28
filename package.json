@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-portfolio-minimal",
-  "description": "A clean, one-page portfolio using MDX",
+  "name": "giorgiodg.it",
+  "description": "My one-page website powered by Gatsby",
   "version": "1.0.0",
-  "author": "Konstantin Münster <mail@konstantin.digital>",
+  "author": "Giorgio Delle Grottaglie <mail@giorgiodg.it>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -91,9 +91,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal"
+    "url": "https://github.com/geordie--/giorgiodg.it"
   },
   "bugs": {
-    "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal/issues"
+    "url": "https://github.com/geordie--/giorgiodg.it/issues"
   }
 }

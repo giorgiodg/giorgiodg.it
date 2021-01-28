@@ -9,10 +9,10 @@ describe("IndexPage", () => {
 
   it("renders all sections", () => {
     cy.get("#hero").should("exist")
-    cy.get("#articles").should("exist")
+    // cy.get("#articles").should("exist")
     cy.get("#about").should("exist")
-    cy.get("#interests").should("exist")
-    cy.get("#projects").should("exist")
+    // cy.get("#interests").should("exist")
+    // cy.get("#projects").should("exist")
     cy.get("#contact").should("exist")
   })
 
@@ -26,10 +26,10 @@ describe("IndexPage", () => {
       .findByText(/credits/i)
       .should("have.attr", "href")
       .and("include", "credits")
-    cy.findByTestId("footer-links")
-      .findByText(/privacy/i)
-      .should("have.attr", "href")
-      .and("include", "privacy")
+    // cy.findByTestId("footer-links")
+    //   .findByText(/privacy/i)
+    //   .should("have.attr", "href")
+    //   .and("include", "privacy")
   })
 
   it("renders other pages", () => {
