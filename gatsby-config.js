@@ -5,7 +5,6 @@ const {
   siteDescription,
   siteIcon,
   siteUrl,
-  colors,
 } = require(`./config`)
 
 module.exports = {

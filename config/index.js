@@ -1,9 +1,10 @@
 module.exports = {
   //-- SITE SETTINGS -----
-  author: "--",
+  author: "Giorgio Delle Grottaglie",
   siteTitle: "Giorgio Delle Grottaglie - giorgiodg.it",
   siteShortTitle: "giorgiodg.it", // Used as logo text in header, footer, and splash screen
-  siteDescription: "",
+  siteDescription:
+    "Ciao! I am Giorgio Delle Grottaglie, and I do Technology stuff",
   siteUrl: "https://giorgiodg.it/",
   siteLanguage: "en_UK",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
