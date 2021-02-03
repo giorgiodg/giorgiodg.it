@@ -4,11 +4,11 @@ module.exports = {
   siteTitle: "Giorgio Delle Grottaglie - giorgiodg.it",
   siteShortTitle: "giorgiodg.it", // Used as logo text in header, footer, and splash screen
   siteDescription:
-    "Ciao! I am Giorgio Delle Grottaglie, and I do Technology stuff",
+    "I am Giorgio Delle Grottaglie, and I do Technology stuff. Born and raised in the Heel of Italy, based in Rome.",
   siteUrl: "https://giorgiodg.it/",
   siteLanguage: "en_UK",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
-  seoTitleSuffix: "Giorgio Delle Grottaglie - giorgiodg.it", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
+  seoTitleSuffix: "giorgiodg.it", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
 
   //-- ARTICLES SECTION SETTINGS -----
   // You can create your own Medium feed with this rss to json converter: https://rss2json.com/
