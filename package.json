@@ -67,8 +67,7 @@
     "netlify",
     "portfolio",
     "minimal",
-    "animations",
-    "dark-mode"
+    "animations"
   ],
   "license": "MIT",
   "scripts": {
@@ -91,9 +90,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/geordie--/giorgiodg.it"
+    "url": "https://github.com/giorgiodg/giorgiodg.it"
   },
   "bugs": {
-    "url": "https://github.com/geordie--/giorgiodg.it/issues"
+    "url": "https://github.com/giorgiodg/giorgiodg.it/issues"
   }
 }

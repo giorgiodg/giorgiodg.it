@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       name: "Github",
-      url: "https://github.com/geordie--/",
+      url: "https://github.com/giorgiodg/",
     },
   ],
 
