@@ -16,7 +16,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/privacy/`],
+      },
+    },
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
@@ -26,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: `UA-188271683-1`,
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
         head: false,
         anonymize: true,
       },
@@ -37,8 +42,6 @@ module.exports = {
         name: siteTitle,
         short_name: siteShortTitle,
         start_url: `/`,
-        // background_color: colors.lightTheme.background,
-        // theme_color: colors.lightTheme.primary,
         display: `minimal-ui`,
         icon: siteIcon, // This path is relative to the root of the site.
       },
