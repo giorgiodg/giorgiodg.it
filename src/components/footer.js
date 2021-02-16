@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import ContentWrapper from "../styles/contentWrapper"
-import Context from "../context"
 import Logo from "./logo"
 import { lightTheme } from "../styles/theme"
 import { footerLinks } from "../../config"
@@ -27,7 +26,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       /* Adjust width of links wrapper accordingly */
       width: 10rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: right;
       @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
         width: 15rem;
       }

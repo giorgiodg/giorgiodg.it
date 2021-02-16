@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { lightTheme } from "../styles/theme"
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -14,6 +14,7 @@ const SEO = ({ description, lang, meta, title }) => {
             title
             description
             author
+            image
           }
         }
       }
@@ -33,6 +34,10 @@ const SEO = ({ description, lang, meta, title }) => {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `image`,
+          content: site.siteMetadata.image,
         },
         {
           property: `og:title`,
@@ -83,6 +88,7 @@ SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   meta: PropTypes.array,
+  image: PropTypes.string,
   lang: PropTypes.string,
 }
 

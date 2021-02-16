@@ -6,6 +6,7 @@ module.exports = {
   siteDescription:
     "I am Giorgio Delle Grottaglie, and I do Technology stuff. Born and raised in the Heel of Italy, based in Rome.",
   siteUrl: "https://giorgiodg.it/",
+  image: "lighthouse.jpg",
   siteLanguage: "en_UK",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "giorgiodg.it", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
@@ -58,10 +59,6 @@ module.exports = {
     },
   },
   footerLinks: [
-    // {
-    //   name: "Privacy",
-    //   url: "/privacy",
-    // },
     {
       name: "Credits",
       url: "/credits",

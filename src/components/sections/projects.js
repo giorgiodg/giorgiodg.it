@@ -7,7 +7,6 @@ import VisibilitySensor from "react-visibility-sensor"
 import { motion } from "framer-motion"
 
 import { useOnScreen } from "../../hooks"
-import Context from "../../context"
 import ContentWrapper from "../../styles/contentWrapper"
 import Underlining from "../../styles/underlining"
 import Button from "../../styles/button"
