@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Context from "../context"
 import Icon from "./icons"
 import { lightTheme } from "../styles/theme"
 import { socialMedia } from "../../config"

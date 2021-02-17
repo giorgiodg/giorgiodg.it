@@ -120,7 +120,7 @@ const Articles = () => {
   const [articles, setArticles] = useState()
   const articlesControls = useAnimation()
 
-  // Load and display articles after the splashScreen sequence is done
+  // Load and display articles after the intro sequence is done
   useEffect(() => {
     const loadArticles = async () => {
       if (isIntroDone) {

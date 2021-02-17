@@ -37,10 +37,6 @@ const GlobalStyle = createGlobalStyle`
             }
           }
         }
-        &.splashScreen {
-              position: fixed;
-              overflow: hidden;
-        }
 
     a {
         display: inline-block;

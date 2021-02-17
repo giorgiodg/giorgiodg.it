@@ -41,10 +41,10 @@ const StyledContentWrapper = styled(ContentWrapper)`
 
 const Credits = ({ data }) => {
   const { body, frontmatter } = data.credits.edges[0].node
-  const { title, seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
+  const { title, seoTitle, useSeoTitleSuffix } = frontmatter
 
   const globalState = {
-    isIntroDone: useSplashScreen ? false : true,
+    isIntroDone: true,
   }
 
   return (
@@ -96,7 +96,6 @@ export const pageQuery = graphql`
             title
             seoTitle
             useSeoTitleSuffix
-            useSplashScreen
           }
         }
       }

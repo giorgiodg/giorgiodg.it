@@ -6,20 +6,16 @@ import GlobalStateProvider from "../context/provider"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
-import Articles from "../components/sections/articles"
 import About from "../components/sections/about"
-import Interests from "../components/sections/interests"
-import Projects from "../components/sections/projects"
 import Contact from "../components/sections/contact"
 import { seoTitleSuffix } from "../../config"
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.index.edges[0].node
-  const { seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
+  const { seoTitle, useSeoTitleSuffix } = frontmatter
 
   const globalState = {
-    // if useSplashScreen=false, we skip the intro by setting isIntroDone=true
-    isIntroDone: useSplashScreen ? false : true,
+    isIntroDone: true,
   }
 
   return (
@@ -58,7 +54,6 @@ export const pageQuery = graphql`
           frontmatter {
             seoTitle
             useSeoTitleSuffix
-            useSplashScreen
           }
         }
       }

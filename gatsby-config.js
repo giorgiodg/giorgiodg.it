@@ -5,7 +5,7 @@ const {
   siteDescription,
   siteIcon,
   siteUrl,
-  image,
+  siteImage,
 } = require(`./config`)
 
 module.exports = {
@@ -14,16 +14,11 @@ module.exports = {
     title: siteTitle,
     description: siteDescription,
     siteUrl: siteUrl,
-    image: image,
+    image: siteImage,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/privacy/`],
-      },
-    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,

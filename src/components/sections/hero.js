@@ -8,7 +8,6 @@ import Context from "../../context/"
 import ContentWrapper from "../../styles/contentWrapper"
 import Underlining from "../../styles/underlining"
 import Social from "../social"
-import SplashScreen from "../splashScreen"
 import { lightTheme } from "../../styles/theme"
 
 const StyledSection = styled.section`
@@ -71,7 +70,7 @@ const Hero = ({ content }) => {
   const sControls = useAnimation()
   const uControls = useAnimation()
 
-  // Start Animations after the splashScreen sequence is done
+  // Start Animations after the intro sequence is done
   useEffect(() => {
     const pageLoadSequence = async () => {
       if (isIntroDone) {
@@ -100,7 +99,7 @@ const Hero = ({ content }) => {
 
   return (
     <StyledSection id="hero">
-      {!isIntroDone && <SplashScreen />}
+      {!isIntroDone}
       <StyledContentWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -14,6 +14,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
             title
             description
             author
+            siteUrl
             image
           }
         }
@@ -22,6 +23,8 @@ const SEO = ({ description, lang, meta, title, image }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = `${site.siteMetadata.siteUrl}/${image ||
+    site.siteMetadata.image}`
 
   return (
     <Helmet
@@ -34,10 +37,6 @@ const SEO = ({ description, lang, meta, title, image }) => {
         {
           name: `description`,
           content: metaDescription,
-        },
-        {
-          name: `image`,
-          content: site.siteMetadata.image,
         },
         {
           property: `og:title`,
@@ -54,6 +53,10 @@ const SEO = ({ description, lang, meta, title, image }) => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
         },
         {
           name: `twitter:card`,
@@ -96,6 +99,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  image: null,
 }
 
 export default SEO

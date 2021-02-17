@@ -91,7 +91,7 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleWindowSizeChange)
   }, [windowWidth])
 
-  // Required for animation - start after the splashScreen sequence is done
+  // Required for animation - start after the intro sequence is done
   const controls = useAnimation()
   useEffect(() => {
     if (isIntroDone)

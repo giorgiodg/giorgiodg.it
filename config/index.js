@@ -2,13 +2,13 @@ module.exports = {
   //-- SITE SETTINGS -----
   author: "Giorgio Delle Grottaglie",
   siteTitle: "Giorgio Delle Grottaglie - giorgiodg.it",
-  siteShortTitle: "giorgiodg.it", // Used as logo text in header, footer, and splash screen
+  siteShortTitle: "giorgiodg.it", // Used as logo text in header, footer
   siteDescription:
     "I am Giorgio Delle Grottaglie, and I do Technology stuff. Born and raised in the Heel of Italy, based in Rome.",
-  siteUrl: "https://giorgiodg.it/",
-  image: "lighthouse.jpg",
+  siteUrl: "https://giorgiodg.it",
+  siteImage: "lighthouse.jpg",
   siteLanguage: "en_UK",
-  siteIcon: "content/favicon.png", // Relative to gatsby-config file
+  siteIcon: "static/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "giorgiodg.it", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
 
   //-- ARTICLES SECTION SETTINGS -----
@@ -40,14 +40,6 @@ module.exports = {
   //-- NAVIGATION SETTINGS -----
   navLinks: {
     menu: [
-      // {
-      //   name: "Articles",
-      //   url: "/#articles",
-      // },
-      // {
-      //   name: "Features",
-      //   url: "/#projects",
-      // },
       {
         name: "About",
         url: "/#about",
