@@ -35,10 +35,6 @@ module.exports = {
             categoryName: "analytics", // Unique id of the category which is set by Cookiehub.
             cookieName: "gatsby-plugin-google-analytics-gdpr_cookies-enabled", // Your custom cookie name
           },
-          {
-            categoryName: "marketing",
-            cookieName: "marketing-enabled",
-          },
         ],
       },
     },

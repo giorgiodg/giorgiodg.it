@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Github = ({ color }) => {
+const GitHub = ({ color }) => {
   return (
     <svg
       version="1.1"
@@ -25,12 +25,12 @@ const Github = ({ color }) => {
   )
 }
 
-Github.propTypes = {
+GitHub.propTypes = {
   color: PropTypes.string,
 }
 
-Github.defaultProps = {
+GitHub.defaultProps = {
   color: "#000000",
 }
 
-export default Github
+export default GitHub

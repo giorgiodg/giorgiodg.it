@@ -89,30 +89,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    interests: allMdx(
-      filter: { fileAbsolutePath: { regex: "/index/interests/" } }
-    ) {
-      edges {
-        node {
-          exports {
-            shownItems
-            interests {
-              name
-              icon {
-                childImageSharp {
-                  fixed(width: 20, height: 20, quality: 90) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-            }
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
     projects: allMdx(
       filter: {
         fileAbsolutePath: { regex: "/index/projects/" }

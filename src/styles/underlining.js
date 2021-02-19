@@ -1,13 +1,12 @@
 import styled from "styled-components"
 
 const Underlining = styled.span`
-  box-shadow: inset 0 ${({ big }) => (big ? "-1rem" : "-.5rem")} 0
-    ${({ theme, highlight }) =>
-      highlight ? theme.colors.secondary : theme.colors.tertiary};
-  transition: box-shadow 0.3s ease-out;
+  color: ${({ theme }) => theme.colors.tertiary};
+  transition: box-shadow 0.2s ease-out;
   &:hover {
-    box-shadow: inset 0 ${({ big }) => (big ? "-2rem" : "-1rem")} 0
+    box-shadow: 0 ${({ big }) => (big ? "0.5rem" : "0.125rem")} 0
       ${({ theme }) => theme.colors.tertiary};
+    color: ${({ theme }) => theme.colors.tertiary};
   }
 `
 

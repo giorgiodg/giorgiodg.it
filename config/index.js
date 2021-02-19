@@ -28,12 +28,12 @@ module.exports = {
       url: "https://www.linkedin.com/in/giorgiodellegrottaglie/",
     },
     {
-      name: "Medium",
-      url: "https://medium.com/@geordie__",
+      name: "GitHub",
+      url: "https://github.com/giorgiodg/",
     },
     {
-      name: "Github",
-      url: "https://github.com/giorgiodg/",
+      name: "Medium",
+      url: "https://medium.com/@geordie__",
     },
   ],
 

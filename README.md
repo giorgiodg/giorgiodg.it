@@ -17,7 +17,7 @@ A big thanks to Konstantin Münster who inspired me with his awesome [minimal po
 
    `npm install -g gatsby-cli`
 
-2. **Create a new Gatsby site with the Portfolio Minimal starter.**
+2. **Clone this repo from GitHub.**
 
    `git clone https://github.com/giorgiodg/giorgiodg.it`
 

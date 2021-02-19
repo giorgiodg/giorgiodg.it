@@ -81,7 +81,7 @@ const StyledSocialProfile = styled.a`
   border-radius: ${({ theme }) => theme.borderRadius};
   border: 0.125rem solid ${({ theme }) => theme.colors.tertiary};
   padding: ${({ padding }) => (padding ? padding : ".3rem 1.25rem")};
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
   font-size: ${({ fontSize }) => (fontSize ? fontSize : "1rem")};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.tertiary};
