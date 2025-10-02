@@ -1,0 +1,107 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import Book from "@lucide/astro/icons/book";
+import Github from "@lucide/astro/icons/github";
+import Linkedin from "@lucide/astro/icons/linkedin";
+import { SITE, HOME } from "@consts";
+
+const blog = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const projects = (await getCollection("projects"))
+  .filter((project) => !project.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+
+// // const allwork = (await getCollection("work"))
+// //   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
+// //   .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
+
+// const work = await Promise.all(
+//   allwork.map(async (item) => {
+//     const { Content } = await item.render();
+//     return { ...item, Content };
+//   })
+// );
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <section class="flex items-center justify-center h-screen text-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold">
+          Ciao!<br />
+          I'm Giorgio Delle Grottaglie
+        </h1>
+        <h2
+          class="mt-4 text-2xl md:text-3xl font-bold text-amber-700 dark:text-amber-600"
+        >
+          I do Technology stuff
+        </h2>
+        <div class="flex justify-center space-x-6 mt-8">
+          <Link
+            href="https://www.linkedin.com/in/giorgiodellegrottaglie/"
+            external
+            aria-label="Linkedin"
+          >
+            <Linkedin class="w-8 h-8" />
+          </Link>
+          <Link
+            href="https://github.com/giorgiodg/"
+            external
+            aria-label="github"
+          >
+            <Github class="w-8 h-8" />
+          </Link>
+          <Link
+            href="https://medium.com/@giorgio.dg"
+            external
+            aria-label="medium"
+          >
+            <Book class="w-8 h-8" />
+          </Link>
+        </div>
+      </div>
+    </section>
+    <section class="animate space-y-6">
+      <div class="flex flex-wrap gap-y-2 items-center justify-between">
+        <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
+        <Link href="/blog"> See all posts </Link>
+      </div>
+      <ul class="flex flex-col gap-4">
+        {
+          blog.map((post) => (
+            <li>
+              <ArrowCard entry={post} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects"> See all projects </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {
+            projects.map((project) => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
+        </ul>
+      </section> -->
+    <!-- </div> -->
+  </Container>
+</PageLayout>
