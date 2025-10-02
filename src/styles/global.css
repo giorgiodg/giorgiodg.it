@@ -19,7 +19,7 @@ body {
 body {
   @apply font-sans antialiased;
   @apply flex flex-col;
-  @apply bg-zinc-100 dark:bg-zinc-900;
+  @apply bg-gray-100 dark:bg-zinc-900;
   @apply text-black dark:text-white;
 }
 
