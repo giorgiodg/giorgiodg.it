@@ -16,11 +16,17 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  robots?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/lighthouse.png" } = Astro.props;
+const {
+  title,
+  description,
+  image = "/lighthouse.png",
+  robots = "index, follow",
+} = Astro.props;
 
 const enableBetterlytics =
   import.meta.env.PUBLIC_ENABLE_BETTERLYTICS === "true";
@@ -51,6 +57,9 @@ const siteId = import.meta.env.BETTERLYTICS_SITE_ID;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- Robots -->
+<meta name="robots" content={robots} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
