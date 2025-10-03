@@ -44,17 +44,23 @@ const blog = (await getCollection("blog"))
           I do Technology stuff
         </h2>
         <div class="flex justify-center space-x-6 mt-8">
-          <Link
-            href="https://www.linkedin.com/in/giorgiodellegrottaglie/"
-            external
-            aria-label="Linkedin"
+          <button
+            ><Link
+              href="https://www.linkedin.com/in/giorgiodellegrottaglie/"
+              external
+              aria-label="Linkedin"
+              data-event="cta-click"
+              data-properties='{"buttonText":"LinkedIn","source":"index"}'
+            >
+              <Linkedin class="w-8 h-8" />
+            </Link></button
           >
-            <Linkedin class="w-8 h-8" />
-          </Link>
           <Link
             href="https://github.com/giorgiodg/"
             external
             aria-label="github"
+            data-event="cta-click"
+            data-properties='{"buttonText":"GitHub","source":"index"}'
           >
             <Github class="w-8 h-8" />
           </Link>
@@ -62,6 +68,8 @@ const blog = (await getCollection("blog"))
             href="https://medium.com/@giorgio.dg"
             external
             aria-label="medium"
+            data-event="cta-click"
+            data-properties='{"buttonText":"Medium","source":"index"}'
           >
             <Book class="w-8 h-8" />
           </Link>

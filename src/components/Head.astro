@@ -27,22 +27,7 @@ const {
   image = "/lighthouse.png",
   robots = "index, follow",
 } = Astro.props;
-
-const enableBetterlytics =
-  import.meta.env.PUBLIC_ENABLE_BETTERLYTICS === "true";
-const siteId = import.meta.env.BETTERLYTICS_SITE_ID;
 ---
-
-<!-- Betterlytics script -->{
-  enableBetterlytics && (
-    <script
-      async
-      src="https://betterlytics.io/analytics.js"
-      data-site-id={siteId}
-      data-server-url="https://betterlytics.io/track"
-    />
-  )
-}
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />

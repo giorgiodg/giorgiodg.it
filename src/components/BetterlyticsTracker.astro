@@ -1,0 +1,59 @@
+---
+interface Props {
+  enable?: boolean;
+  siteId: string;
+}
+
+const { enable = true, siteId,  } = Astro.props;
+---
+
+
+{enable && (
+<!-- Conditionally load the analytics script -->
+<script
+  async
+  src="https://betterlytics.io/analytics.js"
+  data-site-id={siteId}
+  data-server-url="https://betterlytics.io/track"></script>
+
+<!-- Define a global helper + auto-binding -->
+<script>
+  function waitForBetterlytics() {
+        return new Promise<void>(resolve => {
+          const interval = setInterval(() => {
+            if (window.betterlytics) {
+              clearInterval(interval);
+              resolve();
+            }
+          }, 100);
+        });
+      }
+
+  waitForBetterlytics().then(() => {
+        window.trackEvent = (eventName, params = {}) => {
+          window.betterlytics.event(eventName, params);
+        };
+
+        document.addEventListener("click", (e) => {
+          
+          const el = e.target.closest("[data-event]");
+          if (!el) return;
+
+          const event = el.dataset.event;
+          const propertiesString = el.dataset.properties;
+          let properties = {};
+
+          if (propertiesString) {
+            try {
+              properties = JSON.parse(propertiesString);
+            } catch {
+              console.warn("Invalid JSON in data-properties:", propertiesString);
+            }
+          }
+
+          window.trackEvent(event, properties);
+        });
+      });
+
+</script>
+)}

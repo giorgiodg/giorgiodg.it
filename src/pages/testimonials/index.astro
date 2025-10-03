@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import { WORK } from "@consts";
+import Link from "@components/Link.astro";
 
 const collection = (await getCollection("work")).sort(
   (a, b) => b.data.position - a.data.position
@@ -35,5 +36,15 @@ const work = await Promise.all(
         }
       </ul>
     </div>
+    <div class="space-y-16 pt-8"></div>
+    See more testimonials on my&nbsp;
+    <Link
+      href="https://www.linkedin.com/in/giorgiodellegrottaglie/"
+      external
+      aria-label="Linkedin"
+      data-event="cta-click"
+      data-properties='{"buttonText":"LinkedIn","source":"testimonials"}'
+      >LinkedIn profile</Link
+    >
   </Container>
 </PageLayout>
