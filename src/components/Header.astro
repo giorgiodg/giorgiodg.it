@@ -89,10 +89,12 @@ import MenuItem from "./MenuItem.astro";
     toggleBtn.replaceWith(toggleBtn.cloneNode(true));
     const newToggleBtn = document.getElementById("menu-toggle");
 
-    newToggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-      iconHamburger.classList.toggle("hidden");
-      iconClose.classList.toggle("hidden");
-    });
+    if (newToggleBtn) {
+      newToggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (iconHamburger) iconHamburger.classList.toggle("hidden");
+        if (iconClose) iconClose.classList.toggle("hidden");
+      });
+    }
   }
 </script>

@@ -7,6 +7,7 @@ import Book from "@lucide/astro/icons/book";
 import Github from "@lucide/astro/icons/github";
 import Linkedin from "@lucide/astro/icons/linkedin";
 import { SITE, HOME } from "@consts";
+import ArrowCard from "@components/ArrowCard.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -77,7 +78,7 @@ const blog = (await getCollection("blog"))
       </div>
     </section>
 
-    <!-- <section class="animate space-y-6">
+    <section class="animate space-y-6">
       <div class="flex flex-wrap gap-y-2 items-center justify-between">
         <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
         <Link href="/blog"> See all posts </Link>
@@ -91,7 +92,7 @@ const blog = (await getCollection("blog"))
           ))
         }
       </ul>
-    </section> -->
+    </section>
 
     <!-- <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">

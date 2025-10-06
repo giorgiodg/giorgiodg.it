@@ -4,19 +4,27 @@ interface Props {
   siteId: string;
 }
 
+// Add global type declaration for betterlytics
+declare global {
+  interface Window {
+    betterlytics?: {
+    event: (eventName: string, params?: Record<string, unknown>) => void;
+    };
+    trackEvent?: (eventName: string, params?: Record<string, unknown>) => void;
+  }
+}
+
 const { enable = true, siteId,  } = Astro.props;
 ---
 
 
 {enable && (
-<!-- Conditionally load the analytics script -->
 <script
   async
   src="https://betterlytics.io/analytics.js"
   data-site-id={siteId}
   data-server-url="https://betterlytics.io/track"></script>
 
-<!-- Define a global helper + auto-binding -->
 <script>
   function waitForBetterlytics() {
         return new Promise<void>(resolve => {
@@ -31,16 +39,18 @@ const { enable = true, siteId,  } = Astro.props;
 
   waitForBetterlytics().then(() => {
         window.trackEvent = (eventName, params = {}) => {
-          window.betterlytics.event(eventName, params);
+          if (window.betterlytics) {
+            window.betterlytics.event(eventName, params);
+          }
         };
 
         document.addEventListener("click", (e) => {
           
-          const el = e.target.closest("[data-event]");
+          const el = (e.target instanceof Element) ? e.target.closest("[data-event]") : null;
           if (!el) return;
 
-          const event = el.dataset.event;
-          const propertiesString = el.dataset.properties;
+          const event = (el as HTMLElement).dataset.event;
+          const propertiesString = (el as HTMLElement).dataset.properties;
           let properties = {};
 
           if (propertiesString) {
@@ -51,7 +61,9 @@ const { enable = true, siteId,  } = Astro.props;
             }
           }
 
-          window.trackEvent(event, properties);
+          if (typeof window.trackEvent === "function" && typeof event === "string") {
+            window.trackEvent(event, properties);
+          }
         });
       });
 
