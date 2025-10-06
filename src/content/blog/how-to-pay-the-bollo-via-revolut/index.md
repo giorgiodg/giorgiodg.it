@@ -2,7 +2,7 @@
 title: "How to pay the bollo via Revolut with zero commission"
 description: "Use Revolut to avoid extra commissions when paying the Italian bollo tax for cars and motorcycles"
 date: "Oct 01 2025"
-tags: ["revolut"]
+tags: ["revolut", "fintech"]
 draft: false
 ---
 
