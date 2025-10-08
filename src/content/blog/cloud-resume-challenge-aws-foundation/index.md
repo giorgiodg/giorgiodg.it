@@ -3,7 +3,7 @@ title: "My journey into the Cloud Resume Challenge: building the Foundation on A
 description: "This is the first post in a series about the Cloud Resume Challenge. Learn how to complete the initial steps using AWS, Astro, S3, and CloudFront to build and host your cloud personal website."
 date: "Oct 10 2025"
 tags: ["AWS", "cloud", "cloud resume challenge"]
-draft: true
+draft: false
 ---
 
 The job market is more demanding these days. And when it comes to finding a job in tech, it’s no longer enough to showcase your skills on your CV. Recruiters will look not only at your LinkedIn, but also at your GitHub and personal website.
@@ -18,11 +18,11 @@ This is the first post in a collection I’m writing to share what I’ve learne
 
 ### 1. HTML website
 
-Like in the case of this [website](/welcome-to-my-new-website) I chose [**Astro**](https://astro.build/) because it’s a lightweight and fast framework. After trying more complex options like GatsbyJS and Next.js, I appreciated its shallow learning curve and how quickly I could get a working product online.
+As with this [website](/welcome-to-my-new-website) I chose [**Astro**](https://astro.build/) because it’s a lightweight and fast framework. After trying more complex options like GatsbyJS and Next.js, I appreciated its shallow learning curve and how quickly I could get a working product online.
 
 ### 2. CloudFront and S3
 
-#### Create a S3 bucket
+#### Create an S3 bucket
 
 Create a new bucket in your preferred region and give it a unique name.
 Make sure to:
@@ -63,3 +63,50 @@ function handler(event) {
   return request;
 }
 ```
+
+### 3. Domain and SSL integration with CloudFront
+
+### Buy a domain
+
+I used GoDaddy to buy <giorgiodg.cloud> at a very cheap price. In retrospect I may have used another service, probably Route53 because of reasons you will discover soon.
+
+### Create a new certificate
+
+Go to Certificate Manager (ACM) and request a certificate. Just make sure you're in the us-east-1 (N. Virginia) region.
+Use an asterisk to request a wildcard certificate to protect several sites in the same domain. In my case it was `*.giorgiodg.cloud`.
+Leave the default settings, and add tagging as usual. The newly created certificate will be in "Pending validation".
+
+So, let's navigate to GoDaddy, go to My Products > DNS > Manage DNS.
+Here we'll add two CNAME Records:
+
+- The first will point to your CloudFront distribution:
+  - Type: CNAME
+  - Name: www
+  - Value: **your cloudfront distribution name**
+
+**Note:** that if there is already a "www" value, then you can edit the value. Creating a new one could give you an error message.
+
+- The second will point to the AWS Certificate Manager (ACM) validation server:
+  - Type: CNAME
+  - Name: **use the CNAME name in the ACM certificate**
+  - Value: **use the CNAME value in the ACM certificate**
+
+**Note:** if the CNAME name is **\_c3e2d7eaf1e656b73f46cd6980fdc0e.example.com**, enter only **\_c3e2d7eaf1e656b73f46cd6980fdc0e**
+
+Once the certificate status changes to "issued" head over to the CloudFront console.
+Select your CloudFront distribution
+In the "General" section of your CloudFront distribution add the domain name you entered for your certificate in the "Alternate domain name (CNAME)" section.
+Select the certificate you just generated in the "Custom SSL certificate" section, save and wait for the deployment.
+
+### Note about GoDaddy
+
+GoDaddy doesn’t support CNAME records for APEX (root) domains by default. Luckily, there's a workaround.
+In my case I had to go to the Forwarding section on GoDaddy and add this rule:
+
+- Domain giorgiodg.cloud
+- Destination https://www.giorgiodg.cloud
+- Choose the Permanent (301) forward option
+  This is why I said earlier that I shouldn't have bought a GoDaddy domain.
+
+With the domain and SSL in place, the foundation is ready. It was exciting to navigate to <giorgiodg.cloud> and see the website live!
+In the next post, I’ll continue with backend integration to make the website dynamic.
