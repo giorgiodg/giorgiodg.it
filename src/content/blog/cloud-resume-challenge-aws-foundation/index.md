@@ -68,7 +68,7 @@ function handler(event) {
 
 ### Buy a domain
 
-I used GoDaddy to buy <giorgiodg.cloud> at a very cheap price. In retrospect I may have used another service, probably Route53 because of reasons you will discover soon.
+I used GoDaddy to buy <a href="https://www.giorgiodg.cloud" target="_blank">giorgiodg.cloud</a> at a very cheap price. In retrospect I may have used another service, probably Route53 because of reasons you will discover soon.
 
 ### Create a new certificate
 
