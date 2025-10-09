@@ -1,7 +1,7 @@
 ---
 title: "My journey into the Cloud Resume Challenge: building the Foundation on AWS"
 description: "This is the first post in a series about the Cloud Resume Challenge. Learn how to complete the initial steps using AWS, Astro, S3, and CloudFront to build and host your cloud personal website."
-date: "Oct 10 2025"
+date: "Oct 08 2025"
 tags: ["AWS", "cloud", "cloud resume challenge", "DevOps"]
 draft: false
 ---
@@ -108,5 +108,5 @@ In my case I had to go to the Forwarding section on GoDaddy and add this rule:
 - Choose the Permanent (301) forward option
   This is why I said earlier that I shouldn't have bought a GoDaddy domain.
 
-With the domain and SSL in place, the foundation is ready. It was exciting to navigate to <giorgiodg.cloud> and see the website live!
+With the domain and SSL in place, the foundation is ready. It was exciting to navigate to <a href="https://www.giorgiodg.cloud" target="_blank">giorgiodg.cloud</a> and see the website live!  
 In the next post, I’ll continue with backend integration to make the website dynamic.
