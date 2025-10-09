@@ -6,7 +6,7 @@ tags: ["astro", "development", "open source"]
 draft: false
 ---
 
-When I migrated this site from Next.js to [Astro](https://astro.build/), one of the first things I needed to re-enable was analytics.
+When I [migrated](/blog/welcome-to-my-new-website) this site from Next.js to [Astro](https://astro.build/), one of the first things I needed to re-enable was analytics.
 I recently switched to [Betterlytics](https://betterlytics.io/) for that, an open-source, cookieless, and lightweight alternative to mainstream trackers.
 
 Let’s walk through how to integrate it into an Astro project.

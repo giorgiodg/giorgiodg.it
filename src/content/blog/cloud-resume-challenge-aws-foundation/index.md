@@ -2,7 +2,7 @@
 title: "My journey into the Cloud Resume Challenge: building the Foundation on AWS"
 description: "This is the first post in a series about the Cloud Resume Challenge. Learn how to complete the initial steps using AWS, Astro, S3, and CloudFront to build and host your cloud personal website."
 date: "Oct 10 2025"
-tags: ["AWS", "cloud", "cloud resume challenge"]
+tags: ["AWS", "cloud", "cloud resume challenge", "DevOps"]
 draft: false
 ---
 
@@ -18,7 +18,7 @@ This is the first post in a collection I’m writing to share what I’ve learne
 
 ### 1. HTML website
 
-As with this [website](/welcome-to-my-new-website) I chose [**Astro**](https://astro.build/) because it’s a lightweight and fast framework. After trying more complex options like GatsbyJS and Next.js, I appreciated its shallow learning curve and how quickly I could get a working product online.
+As with this [website](/blog/welcome-to-my-new-website) I chose [**Astro**](https://astro.build/) because it’s a lightweight and fast framework. After trying more complex options like GatsbyJS and Next.js, I appreciated its shallow learning curve and how quickly I could get a working product online.
 
 ### 2. CloudFront and S3
 
