@@ -49,6 +49,11 @@ export const PROJECTS: Metadata = {
     "A collection of my projects, with links to repositories and demos.",
 };
 
+export const PAGE404: Metadata = {
+  TITLE: "404 Not Found",
+  DESCRIPTION: "",
+};
+
 // export const SOCIALS: Socials = [
 //   {
 //     NAME: "github",
