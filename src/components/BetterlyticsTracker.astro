@@ -1,0 +1,71 @@
+---
+interface Props {
+  enable?: boolean;
+  siteId: string;
+}
+
+// Add global type declaration for betterlytics
+declare global {
+  interface Window {
+    betterlytics?: {
+    event: (eventName: string, params?: Record<string, unknown>) => void;
+    };
+    trackEvent?: (eventName: string, params?: Record<string, unknown>) => void;
+  }
+}
+
+const { enable = true, siteId,  } = Astro.props;
+---
+
+
+{enable && (
+<script
+  async
+  src="https://betterlytics.io/analytics.js"
+  data-site-id={siteId}
+  data-server-url="https://betterlytics.io/track"></script>
+
+<script>
+  function waitForBetterlytics() {
+        return new Promise<void>(resolve => {
+          const interval = setInterval(() => {
+            if (window.betterlytics) {
+              clearInterval(interval);
+              resolve();
+            }
+          }, 100);
+        });
+      }
+
+  waitForBetterlytics().then(() => {
+        window.trackEvent = (eventName, params = {}) => {
+          if (window.betterlytics) {
+            window.betterlytics.event(eventName, params);
+          }
+        };
+
+        document.addEventListener("click", (e) => {
+          
+          const el = (e.target instanceof Element) ? e.target.closest("[data-event]") : null;
+          if (!el) return;
+
+          const event = (el as HTMLElement).dataset.event;
+          const propertiesString = (el as HTMLElement).dataset.properties;
+          let properties = {};
+
+          if (propertiesString) {
+            try {
+              properties = JSON.parse(propertiesString);
+            } catch {
+              console.warn("Invalid JSON in data-properties:", propertiesString);
+            }
+          }
+
+          if (typeof window.trackEvent === "function" && typeof event === "string") {
+            window.trackEvent(event, properties);
+          }
+        });
+      });
+
+</script>
+)}

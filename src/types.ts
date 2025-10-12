@@ -1,6 +1,8 @@
 export type Site = {
   NAME: string;
   EMAIL: string;
+  NUM_POSTS_ON_HOMEPAGE: number;
+  NUM_PROJECTS_ON_HOMEPAGE: number;
 };
 
 export type Metadata = {
@@ -8,14 +10,8 @@ export type Metadata = {
   DESCRIPTION: string;
 };
 
-export type BlogEntry = {
-  href: string;
-  title: string;
-  description: string;
-};
-
-export type PersonalLink = {
-  name: string;
-  href: string;
-  icon?: any;
-};
+// export type Socials = {
+//   NAME: string;
+//   HREF: string;
+//   ICON: any;
+// }[];

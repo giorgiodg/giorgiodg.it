@@ -1,0 +1,50 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { ABOUT } from "@consts";
+import Link from "@components/Link.astro";
+import { Image } from "astro:assets";
+import aboutImage from "../images/about.jpg";
+---
+
+<PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
+  <Container>
+    <h2 class="font-extrabold pt-16">{ABOUT.TITLE}</h2>
+    <div class="space-y-16 pt-8">
+      <section>
+        <div class="space-y-4">
+          <p>
+            I was born and raised in <Link
+              href="https://en.wikipedia.org/wiki/Mesagne"
+              aria-label="Mesagne on Wikipedia"
+              external
+            >
+              Mesagne
+            </Link>, a nice sunny city in the <a
+              href="https://en.wikipedia.org/wiki/Terra_di_Otranto"
+              target="_blank"
+              rel="noreferrer">Heel of Italy</a
+            >, and I am currently living in Rome.
+          </p>
+          <p>
+            I am a Technology professional with a significant experience in
+            Software Engineering, Leadership and Business Agility.
+            <br />
+            In the past I had the chance to cover different roles such as Senior
+            Engineering Manager, Software Engineer, Technical Leader and Scrum Master.
+          </p>
+          <p>
+            I built this personal page not only to collect my online references
+            but also to challenge myself with trying new Open Source libraries
+            and tools for Software Development.
+          </p>
+          <p>
+            This picture is taken in Porto Cesareo, one of my beloved places.
+          </p>
+
+          <Image src={aboutImage} alt=" picture of me, in Porto Cesareo" />
+        </div>
+      </section>
+    </div></Container
+  >
+</PageLayout>

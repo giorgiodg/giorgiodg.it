@@ -2,15 +2,99 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+import MenuItem from "./MenuItem.astro";
 ---
 
-<header>
+<header class="top-0 z-[9999]" style="isolation:isolate;">
   <Container>
-    <div class="flex flex-wrap gap-y-2 justify-between">
+    <div class="flex items-center justify-between h-16 relative z-50">
       <!-- Logo -->
-      <Link href="/">
+      <Link href="/" underline={false}>
         <div class="font-bold text-lg md:text-lg">{SITE.NAME}</div>
       </Link>
+
+      <!-- Desktop navigation -->
+      <nav class="hidden md:flex gap-3 text-md md:text-lg">
+        <Link underline={false} href="/about">about</Link>
+        <Link underline={false} href="/skills">skills</Link>
+        <Link underline={false} href="/testimonials">testimonials</Link>
+        <Link underline={false} href="/blog">blog</Link>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="md:hidden p-2 rounded focus:outline-none z-[10000] relative"
+        aria-label="Toggle menu"
+      >
+        <svg
+          id="icon-hamburger"
+          class="h-6 w-6 block pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg
+          id="icon-close"
+          class="h-6 w-6 hidden pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
     </div>
+
+    <!-- Mobile nav -->
+
+    <nav
+      id="mobile-menu"
+      class="flex-col hidden space-y-2 md:hidden text-base relative z-40 pb-2 mb-1"
+    >
+      <MenuItem href={"about"}>about</MenuItem>
+      <MenuItem href={"skills"}>skills</MenuItem>
+      <MenuItem href={"testimonials"}>testimonials</MenuItem>
+      <MenuItem href={"blog"}>blog</MenuItem>
+    </nav>
   </Container>
 </header>
+
+<script>
+  document.addEventListener("astro:after-swap", initMenu);
+  document.addEventListener("DOMContentLoaded", initMenu);
+
+  function initMenu() {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const iconHamburger = document.getElementById("icon-hamburger");
+    const iconClose = document.getElementById("icon-close");
+
+    if (!toggleBtn || !mobileMenu) return;
+
+    // Remove previous listeners if rehydrated
+    toggleBtn.replaceWith(toggleBtn.cloneNode(true));
+    const newToggleBtn = document.getElementById("menu-toggle");
+
+    if (newToggleBtn) {
+      newToggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (iconHamburger) iconHamburger.classList.toggle("hidden");
+        if (iconClose) iconClose.classList.toggle("hidden");
+      });
+    }
+  }
+</script>
