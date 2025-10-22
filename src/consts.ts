@@ -1,4 +1,5 @@
-import type { Site, Metadata } from "@types";
+import type { Site, Metadata, PersonalLink } from "@types";
+import { Book, Github, Linkedin } from "@lucide/astro";
 
 export const SITE: Site = {
   NAME: "giorgiodg.it",
@@ -49,30 +50,12 @@ export const PROJECTS: Metadata = {
     "A collection of my projects, with links to repositories and demos.",
 };
 
-export const PAGE404: Metadata = {
+export const PAGE_404: Metadata = {
   TITLE: "404 Not Found",
   DESCRIPTION: "",
 };
 
-// export const SOCIALS: Socials = [
-//   {
-//     NAME: "github",
-//     HREF: "https://github.com/giorgiodg/",
-//     ICON: Github,
-//   },
-//   {
-//     NAME: "linkedin",
-//     HREF: "https://www.linkedin.com/in/giorgiodellegrottaglie/",
-//     ICON: Linkedin,
-//   },
-//   {
-//     NAME: "medium",
-//     HREF: "https://medium.com/@giorgio.dg",
-//     ICON: Book,
-//   },
-// ];
-
-export const SKILLSLIST = {
+export const SKILLS_LIST = {
   "Leadership & Management": [
     "Multi-Cultural Team Leadership",
     "Stakeholder Management",
@@ -102,3 +85,27 @@ export const SKILLSLIST = {
     "Python",
   ],
 };
+
+export const PERSONAL_LINKS: PersonalLink[] = [
+  {
+    name: "GitHub",
+    href: "https://github.com/giorgiodg/",
+    icon: Github,
+    trackingEvent: "cta-click",
+    trackingProperties: '{"buttonText":"GitHub","source":"index"}',
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/giorgiodellegrottaglie/",
+    icon: Linkedin,
+    trackingEvent: "cta-click",
+    trackingProperties: '{"buttonText":"LinkedIn","source":"index"}',
+  },
+  {
+    name: "Medium",
+    href: "https://medium.com/@giorgio.dg",
+    icon: Book,
+    trackingEvent: "cta-click",
+    trackingProperties: '{"buttonText":"LinkedIn","source":"index"}',
+  },
+];

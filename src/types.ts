@@ -10,8 +10,10 @@ export type Metadata = {
   DESCRIPTION: string;
 };
 
-// export type Socials = {
-//   NAME: string;
-//   HREF: string;
-//   ICON: any;
-// }[];
+export type PersonalLink = {
+  name: string;
+  href: string;
+  icon?: any;
+  trackingEvent?: string;
+  trackingProperties?: string;
+};
