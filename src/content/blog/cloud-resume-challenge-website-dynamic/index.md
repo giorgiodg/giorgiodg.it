@@ -110,9 +110,20 @@ the view counter has been increased.
 
 #### Create the website JavaScript logic
 
-This JavaScript snippet fetches the view count data from the Lambda and
-updates the content of the `#views` HTML element. This is executed once
-the page loads.
+If you're going to use **Astro** the complexity reduces drastically. All you need is a component called `Counter.Astro`:
+
+```Astro
+---
+const response = await fetch(YOUR_LAMBDA_URL);
+const data = await response.json();
+---
+
+<div id="views">
+  Views: {data.view || "n/a"}
+</div>
+```
+
+Otherwise, this is the plain JavaScript implementation.
 
 ```js
 const views = document.querySelector("#views") as HTMLElement | null;

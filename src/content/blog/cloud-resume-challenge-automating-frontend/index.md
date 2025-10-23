@@ -1,5 +1,5 @@
 ---
-title: "My journey into the Cloud Resume Challenge: Automating Frontend Deployment with CI/CD"
+title: "My journey into the Cloud Resume Challenge: automating Frontend Deployment with CI/CD"
 description: "In the third post of the Cloud Resume Challenge series, I automate frontend deployment using GitHub Actions, configure AWS IAM for deployment, and run E2E tests with Cypress."
 date: "Oct 22 2025"
 tags: ["AWS", "cloud", "cloud resume challenge", "DevOps"]
@@ -185,7 +185,7 @@ it("titles are correct", () => {
 });
 
 it("view counter is visualized", () => {
-  cy.get("#views").should("have.text", "Views: N/A");
+  cy.get("#views").contains("Views:");
 });
 
 it("there's a blogpost section and contains a list with at least one item", () => {
