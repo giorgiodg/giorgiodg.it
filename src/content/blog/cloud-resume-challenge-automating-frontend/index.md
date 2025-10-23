@@ -13,7 +13,7 @@ Now it’s time to remove manual deployments and automate the process using **CI
 
 #### Version control setup
 
-I created a new GitHub repository called [`aws-cloud-resume-challenge`](https://github.com/giorgiodg/aws-cloud-resume-challenge/) and organized it into three folders:
+I created a new GitHub repository called <a href="https://github.com/giorgiodg/aws-cloud-resume-challenge/" target="_blank">aws-cloud-resume-challenge</a> and organized it into three folders:
 
 - `frontend/` (for the website)
 - `backend/` (for the Lambda function)
@@ -114,7 +114,7 @@ The user needs permissions to interact with the S3 bucket and invalidate CloudFr
   }
 ```
 
-The IAM user is created with **Terraform**, using the [ci_user module](https://github.com/giorgiodg/aws-cloud-resume-challenge/blob/main/terraform/modules/ci_user/main.tf).  
+The IAM user is created with **Terraform**, using the <a href="https://github.com/giorgiodg/aws-cloud-resume-challenge/blob/main/terraform/modules/ci_user/main.tf" target="_blank">ci_user module</a>.  
 By default, Terraform does not print Key ID and Access key outputs. You can enable them like this:
 
 ```tf
@@ -307,4 +307,4 @@ Future enhancements include:
 - Making the Lambda URL dynamic on the frontend
 - Tracking unique users
 
-I’ll prioritize these improvements using the [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method) and implement the most important items based on the time available.
+I’ll prioritize these improvements using the <a href="https://en.wikipedia.org/wiki/MoSCoW_method" target="_blank">MoSCoW method</a> and implement the most important items based on the time available.

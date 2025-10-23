@@ -110,7 +110,9 @@ the view counter has been increased.
 
 #### Create the website JavaScript logic
 
-If you're going to use **Astro** the complexity reduces drastically. All you need is a component called `Counter.Astro`:
+##### Astro fetch()
+
+You can use <a href="https://docs.astro.build/en/guides/data-fetching/#fetch-in-astro" target="_blank">fetch()</a> function and the implementation will be very easy. It boils down to a simple Astro component like this:
 
 ```Astro
 ---
@@ -123,7 +125,13 @@ const data = await response.json();
 </div>
 ```
 
-Otherwise, this is the plain JavaScript implementation.
+This `fetch()` call will be executed at build time or on the server (SSR), not in the browser.
+The request to the Lambda is made from Node.js and, like any other server-to-server call, it **will bypass the CORS checks** we set up before.
+You will realize that you can call the lambda even when running the website locally.
+
+##### Javascript client-side
+
+Alternatively, you can call the Lambda from client-side. This is a more common approach. Or, at least, it's the one I've seen being adopted widely in this challenge.
 
 ```js
 const views = document.querySelector("#views") as HTMLElement | null;
@@ -146,7 +154,7 @@ updateCounter();
 ```
 
 It's up to you whether to include this script inline within your TML or as a separate .js file referenced in your page.
-Just make sure the script runs after the #views element has been loaded.
+Just make sure the script runs after the `#views` element has been loaded.
 
 Now that you've successfully tested the client-server interaction, go back to the **CORS** settings of your Lambda and replace `*` with your website URL to avoid unexpected calls.
 

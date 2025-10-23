@@ -12,13 +12,13 @@ Where once a Senior Engineering Manager didn’t need to demonstrate day-to-day 
 
 So, I needed something that could give me more exposure to the hands-on topics essential to DevOps, Cloud, and Platform Engineering. **The Cloud Resume Challenge** is perfect for testing those skills.
 
-The challenge is officially made up of **16 steps**, and there are **three versions**. One for each of the most popular cloud providers: AWS, Azure, and GCP. If you want to learn more about the challenge and explore other success stories, be sure to visit [the official website](https://cloudresumechallenge.dev/).
+The challenge is officially made up of **16 steps**, and there are **three versions**. One for each of the most popular cloud providers: AWS, Azure, and GCP. If you want to learn more about the challenge and explore other success stories, be sure to visit <a href="https://cloudresumechallenge.dev/" target="_blank">the official website</a>.
 
 This is the first post in a collection I’m writing to share what I’ve learned to build a cloud resume on **AWS**.
 
 ### 1. HTML website
 
-As with this [website](/blog/welcome-to-my-new-website), I chose [**Astro**](https://astro.build/) because it’s a lightweight and fast framework. After trying more complex options like GatsbyJS and Next.js, I appreciated its shallow learning curve and how quickly I could get a working product online.
+As with this [website](/blog/welcome-to-my-new-website), I chose **Astro** because it’s a lightweight and fast framework. After trying more complex options like GatsbyJS and Next.js, I appreciated its shallow learning curve and how quickly I could get a working product online.
 
 ### 2. CloudFront and S3
 
