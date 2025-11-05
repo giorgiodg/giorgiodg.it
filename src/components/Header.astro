@@ -10,14 +10,18 @@ import MenuItem from "./MenuItem.astro";
     <div class="flex items-center justify-between h-16 relative z-50">
       <!-- Logo -->
       <Link href="/" underline={false}>
-        <div class="font-bold text-lg md:text-lg">{SITE.NAME}</div>
+        <div
+          class="font-bold text-lg md:text-lg text-amber-700 dark:text-amber-600"
+        >
+          {SITE.NAME}
+        </div>
       </Link>
 
       <!-- Desktop navigation -->
       <nav class="hidden md:flex gap-3 text-md md:text-lg">
         <Link underline={false} href="/about">about</Link>
-        <Link underline={false} href="/skills">skills</Link>
-        <Link underline={false} href="/testimonials">testimonials</Link>
+        <Link underline={false} href="/work">work</Link>
+        <Link underline={false} href="/showcase">showcase</Link>
         <Link underline={false} href="/blog">blog</Link>
       </nav>
 
@@ -66,8 +70,8 @@ import MenuItem from "./MenuItem.astro";
       class="flex-col hidden space-y-2 md:hidden text-base relative z-40 pb-2 mb-1"
     >
       <MenuItem href={"about"}>about</MenuItem>
-      <MenuItem href={"skills"}>skills</MenuItem>
-      <MenuItem href={"testimonials"}>testimonials</MenuItem>
+      <MenuItem href={"work"}>work</MenuItem>
+      <MenuItem href={"showcase"}>showcase</MenuItem>
       <MenuItem href={"blog"}>blog</MenuItem>
     </nav>
   </Container>

@@ -70,10 +70,3 @@ html #back-to-top {
 html.scrolled #back-to-top {
   @apply opacity-100 pointer-events-auto;
 }
-
-h1 {
-  @apply text-zinc-800 dark:text-zinc-200;
-}
-h2 {
-  @apply text-amber-700 dark:text-amber-600;
-}
