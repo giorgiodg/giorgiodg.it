@@ -5,16 +5,14 @@ import Link from "@components/Link.astro";
 
 {
   PERSONAL_LINKS.map((personalLink) => (
-    <button class="px-1">
-      <Link
-        href={personalLink.href}
-        external
-        aria-label={personalLink.name}
-        data-event={personalLink.trackingEvent}
-        data-properties={personalLink.trackingProperties}
-      >
-        <personalLink.icon class="w-8 h-8" />
-      </Link>
-    </button>
+    <Link
+      href={personalLink.href}
+      external
+      aria-label={personalLink.name}
+      data-event={personalLink.trackingEvent}
+      data-properties={personalLink.trackingProperties}
+    >
+      <personalLink.icon class="w-8 h-8" />
+    </Link>
   ))
 }
