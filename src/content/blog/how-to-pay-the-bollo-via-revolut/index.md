@@ -7,7 +7,7 @@ draft: false
 ---
 
 If you're based in Italy and own a car or a motorcycle, you'll have to pay the **Bollo**, a yearly vehicle tax you owe whether you use the vehicle or not.  
-The problem? Whether you pay it through online banking, at the post office, or in a shop, the service usually adds an extra commission of **€1–3**.  
+The problem? Whether you pay it through online banking, at the post office, or in a shop, the service usually adds an extra commission of **€1-3**.  
 Since early 2022, Revolut has supported the _PagoPA_ system, allowing you to pay taxes, duties, and fees **with zero commission**, regardless of your plan. This is especially useful for the Bollo, the waste tax (TARI), or even fines.
 
 Here’s how to do it in just a few steps.

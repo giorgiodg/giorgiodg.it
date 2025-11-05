@@ -13,7 +13,12 @@ const projects = (await getCollection("showcase"))
 <PageLayout title={SHOWCASE.TITLE} description={SHOWCASE.DESCRIPTION}>
   <Container>
     <h2 class="font-extrabold pt-16">{SHOWCASE.TITLE}</h2>
-    <div class="space-y-16 pt-8">
+    <div class="space-y-8 pt-8">
+      <p>
+        A collection of talks, interviews, and projects publicly available.<br
+        />A small window into a broader range of engineering work carried out
+        throughout my career.
+      </p>
       <ul class="animate flex flex-col gap-4">
         {
           projects.map((project) => (
