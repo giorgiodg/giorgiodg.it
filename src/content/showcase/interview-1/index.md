@@ -1,7 +1,7 @@
 ---
 title: "Interview - How Expedia Group Moved From 21 Platform Stacks to 1"
 details: "The New Stack - 2024"
-description: "In this interview with The New Stack, I shared how we transformed Expedia Group’s developer experience by unifying multiple technology stacks into a single platform, enhancing documentation, and streamlining onboarding for thousands of engineers."
+description: "Interview with The New Stack (2024) on how Expedia Group unified 21 technology stacks into a single developer platform, improving documentation, onboarding, and engineering efficiency."
 date: "Jun 21 2024"
 draft: false
 URL: "https://thenewstack.io/how-expedia-group-moved-from-21-platform-stacks-to-1/"

@@ -1,7 +1,7 @@
 ---
 title: "Talk - Agile in Hotels.com: Essenza e Adattamento"
 details: "Agile Talks Meetup - 2020"
-description: "Agile Talks Meetup"
+description: "Talk presented at the Agile Talks Meetup in Rome (2020) with a colleague from Expedia Group, exploring how agile and traditional organizations can collaborate effectively by adapting Agile Manifesto principles in real-world projects."
 date: "Oct 27 2020"
 draft: false
 URL: "https://www.youtube.com/watch?v=5gJw4qR67Bg"

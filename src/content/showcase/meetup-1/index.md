@@ -1,7 +1,7 @@
 ---
 title: "Talk - Verso l'estimation e oltre"
 details: "Agile Talks Meetup - 2017"
-description: "Agile Talks Meetup"
+description: "Talk presented at the Agile Talks Meetup in Rome (2017) with colleagues from Expedia Group, exploring estimation in agile development and the shift toward data-driven forecasting inspired by the #NoEstimates movement."
 date: "Apr 15 2017"
 draft: false
 URL: "https://www.meetup.com/it-IT/agile_talks/events/238770300/"
