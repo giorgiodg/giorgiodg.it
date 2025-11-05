@@ -48,7 +48,7 @@ export const WORK: Metadata = {
 export const SHOWCASE: Metadata = {
   TITLE: "Showcase",
   DESCRIPTION:
-    "A diverse collection of artifacts like software projects, blogs and talks.",
+    "A collection of talks, interviews, and projects publicly available, offering a small window into the broader engineering work I've done throughout my career.",
 };
 
 export const PROJECTS: Metadata = {
