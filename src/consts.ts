@@ -5,7 +5,7 @@ export const SITE: Site = {
   NAME: "giorgiodg.it",
   EMAIL: "",
   NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_PROJECTS_ON_HOMEPAGE: 0,
+  NUM_SHOWCASE_ITEMS_ON_HOMEPAGE: 3,
 };
 
 export const HOME: Metadata = {
@@ -40,8 +40,15 @@ export const BLOG: Metadata = {
 };
 
 export const WORK: Metadata = {
-  TITLE: "Testimonials",
-  DESCRIPTION: "What people say about me.",
+  TITLE: "Work",
+  DESCRIPTION:
+    "Check out my hard and soft skills, and what people say about me.",
+};
+
+export const SHOWCASE: Metadata = {
+  TITLE: "Showcase",
+  DESCRIPTION:
+    "A diverse collection of artifacts like software projects, blogs and talks.",
 };
 
 export const PROJECTS: Metadata = {
@@ -60,8 +67,6 @@ export const SKILLS_LIST = {
     "Multi-Cultural Team Leadership",
     "Stakeholder Management",
     "Business Agility",
-    "Agile Practices",
-    "Process Improvement",
     "Coaching & Mentorship",
   ],
   Development: [
@@ -75,11 +80,13 @@ export const SKILLS_LIST = {
     "MySQL",
   ],
   "Devops & Cloud": [
-    "AWS",
-    "CI/CD (Spinnaker, Jenkins)",
+    "AWS (ECS, EC2, S3, CloudFront, Lambda and much more)",
+    "CI/CD (Spinnaker, Jenkins, GitHub Actions)",
     "Kubernetes",
     "Backstage",
-    "GitHub",
+    "Terraform",
+    "Git",
+    "Linux",
     "Bash",
     "Go",
     "Python",

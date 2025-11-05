@@ -20,16 +20,17 @@ const work = defineCollection({
   }),
 });
 
-const projects = defineCollection({
+const showcase = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
+    details: z.string(),
     description: z.string(),
     date: z.coerce.date(),
     draft: z.boolean().optional(),
-    demoURL: z.string().optional(),
+    URL: z.string().optional(),
     repoURL: z.string().optional(),
   }),
 });
 
-export const collections = { blog, work, projects };
+export const collections = { blog, work, showcase };
