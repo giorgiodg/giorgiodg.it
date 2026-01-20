@@ -6,6 +6,7 @@ tags: ["AWS", "cloud", "cloud resume challenge", "DevOps"]
 draft: false
 ---
 
+In the [first post](/blog/cloud-resume-challenge-aws-foundation), we laid the foundations using **AWS**, **Astro**, **S3**, and **CloudFront**.  
 In the [second post](/blog/cloud-resume-challenge-website-dynamic), we made the website dynamic by adding a live view counter with **Lambda**, **DynamoDB**, and **JavaScript**.  
 Now it’s time to remove manual deployments and automate the process using **CI/CD**.
 
@@ -175,7 +176,7 @@ beforeEach(() => {
 it("titles are correct", () => {
   cy.get("title").should(
     "have.text",
-    "The Cloud Resume Challenge | giorgiodg.cloud"
+    "The Cloud Resume Challenge | giorgiodg.cloud",
   );
   cy.get("h1")
     .invoke("text")

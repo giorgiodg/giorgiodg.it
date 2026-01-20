@@ -165,4 +165,4 @@ This part took the longest, as I had to learn Terraform fundamentals to port eve
 On the flip side, it drastically reduced manual toil and made testing much faster.
 You can check the final implementation in my <a href="https://github.com/giorgiodg/aws-cloud-resume-challenge/tree/main/terraform" target="_blank">terraform folder</a> on GitHub.
 
-In the next post, I'll focus on automating deployments with **GitHub Actions** to bring everything together into a continuous delivery flow.
+In the [next post](/blog/cloud-resume-challenge-automating-frontend/), I'll focus on automating deployments with **GitHub Actions** to bring everything together into a continuous delivery flow.
