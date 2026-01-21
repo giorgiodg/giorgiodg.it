@@ -6,6 +6,8 @@ import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import PersonalLinks from "@components/PersonalLinks.astro";
+import { Image } from "astro:assets";
+import aboutImage from "../images/about.jpg";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -15,24 +17,40 @@ const blog = (await getCollection("blog"))
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <section class="flex items-center justify-center h-screen text-center">
-      <div class="pb-40">
+    <section
+      class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left my-48"
+    >
+      <div class="md:flex-2 flex flex-col items-center md:items-start">
+        <h2
+          class="mb-4 text-2xl md:text-3xl font-bold text-amber-700 dark:text-amber-600"
+        >
+          Ciao!
+        </h2>
         <h1 class="text-3xl md:text-5xl font-extrabold">
-          Ciao!<br />
-          I'm Giorgio Delle Grottaglie
+          I'm Giorgio<br />Delle Grottaglie
         </h1>
         <h2
           class="mt-4 text-2xl md:text-3xl font-bold text-amber-700 dark:text-amber-600"
         >
           I do Technology stuff
         </h2>
-        <div class="flex justify-center space-x-6 mt-8 gap-2">
+        <div class="flex space-x-6 mt-8 gap-2 justify-center md:justify-start">
           <PersonalLinks />
         </div>
       </div>
+
+      <div class="md:flex-1 flex justify-center md:justify-end mt-8 md:mt-0">
+        <Image
+          src={aboutImage}
+          alt="A picture of me, in Porto Cesareo"
+          width={260}
+          height={340}
+          class="w-36 md:w-52 lg:w-60 h-auto rounded-lg"
+        />
+      </div>
     </section>
 
-    <section class="animate space-y-6">
+    <section class="animate pt-12 space-y-6">
       <div class="flex flex-wrap gap-y-2 items-center justify-between">
         <h3 class="font-semibold text-black dark:text-white">Latest posts</h3>
         <Link href="/blog"> See all posts </Link>
