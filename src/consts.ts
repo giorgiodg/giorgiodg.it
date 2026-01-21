@@ -113,6 +113,6 @@ export const PERSONAL_LINKS: PersonalLink[] = [
     href: "https://medium.com/@giorgio.dg",
     icon: Book,
     trackingEvent: "cta-click",
-    trackingProperties: '{"buttonText":"LinkedIn","source":"index"}',
+    trackingProperties: '{"buttonText":"Medium","source":"index"}',
   },
 ];

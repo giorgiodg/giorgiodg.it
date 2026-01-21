@@ -3,13 +3,11 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import { ABOUT } from "@consts";
 import Link from "@components/Link.astro";
-import { Image } from "astro:assets";
-import aboutImage from "../images/about.jpg";
 ---
 
 <PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
   <Container>
-    <h2 class="font-extrabold pt-16">{ABOUT.TITLE}</h2>
+    <h2 class="font-extrabold">{ABOUT.TITLE}</h2>
     <div class="space-y-16 pt-8">
       <section>
         <div class="space-y-4">
@@ -49,10 +47,6 @@ import aboutImage from "../images/about.jpg";
             references but also to challenge myself by trying new Open Source
             libraries and tools for Software Development.
           </p>
-          <p>
-            This picture is taken in Porto Cesareo, one of my beloved places.
-          </p>
-          <Image src={aboutImage} alt=" picture of me, in Porto Cesareo" />
         </div>
       </section>
     </div></Container
