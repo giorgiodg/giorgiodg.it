@@ -2,7 +2,6 @@
 title: "Talk - Monolite alla julienne: una ricetta per ridurre il time-to-market"
 details: "Mini Agile Day Bari - 2018"
 description: "Talk presented at Mini Agile Day Bari (2018) about Hotels.com's journey from a monolithic architecture to a continuous delivery ecosystem, reducing time-to-market and fostering a culture of agility and ownership across global teams."
-
 date: "Mar 10 2018"
 draft: false
 URL: "https://old.agileday.it/mini/2018/bari/"

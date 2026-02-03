@@ -2,8 +2,8 @@
 title: "Project - The AWS Cloud Resume Challenge"
 details: "Hands-on cloud engineering project - 2025"
 description: "Implementation of the Cloud Resume Challenge — a full-stack cloud project showcasing infrastructure as code, CI/CD automation, and serverless deployment."
-date: "October 1 2025"
-draft: true
+date: "Oct 1 2025"
+draft: false
 URL: "https://www.giorgiodg.cloud/"
 repoURL: "https://github.com/giorgiodg/aws-cloud-resume-challenge"
 ---

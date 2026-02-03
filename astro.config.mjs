@@ -8,10 +8,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) =>
-        page !== "https://giorgiodg.it/cv/" &&
-        page !== "https://giorgiodg.it/skills/" &&
-        page !== "https://giorgiodg.it/testimonials/",
+      filter: (page) => page !== "https://giorgiodg.it/cv/",
     }),
     tailwind(),
   ],
