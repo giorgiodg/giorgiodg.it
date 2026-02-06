@@ -13,9 +13,12 @@ The project combines front-end development, serverless APIs, and infrastructure 
 
 Through this challenge, I implemented:
 
-- Infrastructure as Code (IaC) for reproducible deployments
-- Serverless backend (API Gateway, Lambda, and DynamoDB)
-- Static site hosting with global CDN
-- Continuous Integration and Deployment (CI/CD) pipeline
+- Infrastructure as Code (IaC) via Terraform for reproducible deployments
+- Serverless backend (Lambda and DynamoDB)
+- Front-end via Astro, JavaScript and Tailwind
+- Hosting with Cloudfront, S3 and IAM
+- CI/CD pipeline via GitHub Actions
 
-It was a great opportunity to consolidate best practices in automation, cloud governance, and end-to-end delivery workflows — all using real-world tooling and production-grade setups.
+It was a great opportunity to consolidate best practices in automation, cloud governance, and end-to-end delivery workflows, all using real-world tooling and production-grade setups.
+
+More info in the blogpost series: [1](/blog/cloud-resume-challenge-aws-foundation), [2](/blog/cloud-resume-challenge-website-dynamic), [3](/blog/cloud-resume-challenge-automating-frontend)
