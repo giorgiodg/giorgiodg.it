@@ -8,8 +8,8 @@ URL: "https://addons.mozilla.org/it/firefox/addon/ytm-notifier/"
 repoURL: "https://github.com/giorgiodg/ytm-notifier"
 ---
 
-I buit my very first Firefox add-on that enables Desktop notifications for YouTube Music.  
-What the add-on does is triggering a Desktop notification everytime a new song is played.
+I buit my very first Firefox add-on that enables Wep Push notifications for YouTube Music.  
+What the add-on does is triggering a push notification everytime a new song is played.
 
 ![Desktop notification](./notification.png)
 
