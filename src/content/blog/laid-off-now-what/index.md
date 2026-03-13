@@ -1,7 +1,7 @@
 ---
 title: "Laid off, now what?"
 description: "Bits of learnings from layoffs and how I turned them in an opinionated survival kit"
-date: "Feb 05 2026"
+date: "Mar 05 2026"
 tags: []
 draft: false
 ---
