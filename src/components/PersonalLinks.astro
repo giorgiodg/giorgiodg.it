@@ -1,18 +1,32 @@
 ---
 import { PERSONAL_LINKS } from "@consts";
 import Link from "@components/Link.astro";
+type Props = {
+  hideIcon?: boolean;
+};
+
+const { hideIcon = false } = Astro.props;
 ---
 
 {
   PERSONAL_LINKS.map((personalLink) => (
-    <Link
-      href={personalLink.href}
-      external
-      aria-label={personalLink.name}
-      data-event={personalLink.trackingEvent}
-      data-properties={personalLink.trackingProperties}
-    >
-      <personalLink.icon class="md:w-8 md:h-8" />
-    </Link>
+    <>
+      <Link
+        href={personalLink.href}
+        external
+        aria-label={personalLink.name}
+        data-event={personalLink.trackingEvent}
+        data-properties={personalLink.trackingProperties}
+      >
+        {hideIcon ? (
+          personalLink.name
+        ) : (
+          <personalLink.icon class="md:w-8 md:h-8" />
+        )}
+      </Link>
+      {hideIcon ? (
+        <>&nbsp;</>
+      ) : (<></>) }
+    </>
   ))
 }
