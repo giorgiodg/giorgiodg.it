@@ -25,8 +25,20 @@ if (entry.collection === "blog") {
       {entry.data.title}
     </div>
     <div class="text-sm">
-      <!-- {entry.data.description} -->
       {subtitle}
+    </div>
+    <div>
+      <ul class="flex gap-2 text-xs pt-3">
+        {
+          entry.collection === "blog" &&
+            entry.data.tags &&
+            entry.data.tags.map((tag) => (
+              <li class="rounded border border-black/15 dark:border-white/20 px-2 py-1">
+                {tag}
+              </li>
+            ))
+        }
+      </ul>
     </div>
   </div>
   <svg

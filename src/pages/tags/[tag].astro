@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+
+export async function getStaticPaths() {
+  const allPosts = (await getCollection("blog"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+  // Helper to get all tags in lowercase
+  const getLowerTags = (post: any) =>
+    post.data.tags.map((tag: string) => tag.toLowerCase());
+
+  const uniqueTags = [...new Set(allPosts.flatMap(getLowerTags))];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      getLowerTags(post).includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<PageLayout title={tag} description={"All posts related to" + tag}>
+  <Container>
+    <h2 class="font-extrabold">Posts tagged with "{tag}"</h2>
+    <div class="space-y-16 pt-8">
+      <div class="space-y-4">
+        <section class="animate space-y-4">
+          <div>
+            <ul class="flex flex-col gap-4">
+              <ul class="flex flex-col gap-4">
+                {
+                  posts.map((post: any) => (
+                    <li>
+                      <ArrowCard entry={post} />
+                    </li>
+                  ))
+                }
+              </ul>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </Container>
+</PageLayout>
