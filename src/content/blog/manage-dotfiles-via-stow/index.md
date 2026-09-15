@@ -68,7 +68,7 @@ Execute:
 stow -t ~ vim ghostty
 ```
 
-Keep the `~` parameter if your dotfiles repo lives in a subfolder like  `~/devstuff/dotfiles`. 
+Add `-t ~` to specify the target directory to be your home dir. Default is the parent of stow dir.
 
 This creates:
 
