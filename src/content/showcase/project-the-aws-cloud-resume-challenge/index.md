@@ -4,12 +4,13 @@ details: "Hands-on cloud engineering project - 2025"
 description: "Implementation of the Cloud Resume Challenge — a full-stack cloud project showcasing infrastructure as code, CI/CD automation, and serverless deployment."
 date: "Oct 1 2025"
 draft: false
-URL: "https://www.giorgiodg.cloud/"
 repoURL: "https://github.com/giorgiodg/aws-cloud-resume-challenge"
 ---
 
 I built my own version of the AWS Cloud Resume Challenge, a community-driven initiative designed to help engineers gain practical cloud experience.
-The project combines front-end development, serverless APIs, and infrastructure as code to deploy a fully automated, cloud-native personal website.
+The project combined front-end development, serverless APIs, and infrastructure as code to deploy a fully automated, cloud-native personal website.
+
+![giorgiodg.cloud](./giorgiodg-cloud.png)
 
 Through this challenge, I implemented:
 
