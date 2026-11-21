@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import BackToTop from "@components/BackToTop.astro";
 import Link from "@components/Link.astro";
+import { SITE } from "@consts";
 ---
 
 <footer class="animate">
@@ -16,6 +17,15 @@ import Link from "@components/Link.astro";
       <div>
         &copy;
         {new Date().getFullYear()}
+        {`|`}
+        <Link
+          rel="alternate"
+          type="application/rss+xml"
+          title={SITE.NAME}
+          href={new URL("rss.xml", Astro.site).href}
+        >
+          RSS feed
+        </Link>
         {`|`}
         <Link href="/credits">credits</Link>
       </div>
