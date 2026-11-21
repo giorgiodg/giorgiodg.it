@@ -18,14 +18,14 @@ import { SITE } from "@consts";
         &copy;
         {new Date().getFullYear()}
         {`|`}
-        <Link
+        <a
           rel="alternate"
           type="application/rss+xml"
           title={SITE.NAME}
           href={new URL("rss.xml", Astro.site).href}
         >
           RSS feed
-        </Link>
+        </a>
         {`|`}
         <Link href="/credits">credits</Link>
       </div>
