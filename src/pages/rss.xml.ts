@@ -20,7 +20,7 @@ export async function GET(context: Context) {
     description: HOME.DESCRIPTION,
     site: context.site,
     items: blog.map((item) => ({
-      title: `${item.collection} - ${item.data.title}`,
+      title: item.data.title,
       description: item.data.description,
       pubDate: item.data.date,
       content: sanitizeHtml(parser.render(item.body)),
